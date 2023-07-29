@@ -13,18 +13,20 @@ Play rock-paper-scissors(RPS) as the base of the game. Player and opponent will 
 
 ### Gameplay
 - navigation
-    > mouse click
+    > mouse
+
     > keyboard
+
     > gamepad
 
 - goal
-    Win all the round to finish the game.
+    > Win all the round to finish the game.
 
 - consequences
-    If player win in RPS will move forward and if loose will go backward. Same goes for others.
+    > If player win in RPS will move forward and if loose will go backward. Same goes for others.
 
 - interaction
-    touch finish line to win the match.
+    > touch finish line to win the match.
 
 ### Features
 - single screen divided into 2 view
@@ -67,28 +69,27 @@ Play rock-paper-scissors(RPS) as the base of the game. Player and opponent will 
 ### Sound
 - bg loop music
 - bg sounds
-    crowd cheering
+    - crowd cheering
 
 - movement
 - actions
 - events
-    play start referee whistle
+    - play start referee whistle
 
 - ui sounds
 
 ### UI
 - hud
-    player icon
-    player steps
-    player win
-    player loose
-    competition position
+    - player icon
+    - steps
+    - no of wins and losses
+    - competition position
     
 - cursor
-    cursor changes according to the hand sign
+    - cursor changes according to the hand sign
 
 - interaction
-    on hover cursor animates to the sign
+    - on hover cursor animates to the sign
 
 ### Platform
 - windows
@@ -106,7 +107,7 @@ Play rock-paper-scissors(RPS) as the base of the game. Player and opponent will 
 ### References
 ### Credit
 - developer
-    San2Art
+    > San2Art
 - imported assets
 - fonts
 
