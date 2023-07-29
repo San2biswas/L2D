@@ -2,10 +2,14 @@
  a new interesting way of rock paper scissor game made in Love2d
 
 ### Description
-> Game name - Rock Paper Scissors 
+> Game name - Rock Paper Scissors
+
 > Genre - Guessing game
+
 > Start - 29/07/2023, Fin - 
+
 > Credit - San2Art
+
 > Game Link - 
 
 ### Concept
