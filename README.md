@@ -1,5 +1,5 @@
 # L2D
-Game and apps made using Love2D by San2...
+Game and apps made using Love2D with love...
 --------------------------------------------------
 
 ## About :
@@ -7,7 +7,7 @@ Games, apps, tools, snippets made using Love2D by San2. Feel free to contribute 
 Thank you.
 
 ## Feed :
-L2D repo created
+L2D repo created. Added L2D_RPS Game to it.
 
 ## Games :
 - L2D_RPS (wip)
