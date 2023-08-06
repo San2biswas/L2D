@@ -17,18 +17,9 @@ function love.load()
     csCircle.rad = 10;
     csCircle.w = csCircle.rad
     csCircle.h = csCircle.rad
-    
-------------------------- load ---------------------
 
-function love.load()
-    sRock       = love.graphics.newImage("Assets/Sprites/UI/Rock.png")
-    sPaper      = love.graphics.newImage("Assets/Sprites/UI/Paper.png")
-    sScissors   = love.graphics.newImage("Assets/Sprites/UI/Scissors.png")
-    csCircle    = love.graphics.circle("fill", 0, 0, 10)
-
-    
 end
-
+    
 ----------------------- update ---------------------
 
 function love.update(dt)
@@ -131,11 +122,5 @@ function love.draw()
     love.graphics.print(cText, 200, 200);
     love.graphics.circle("fill", csCircle.x, csCircle.y, csCircle.rad); --  only cursor replace
     
-end    
-
-    local _leftMargin = 25
-    love.graphics.draw(sRock, 0 + _leftMargin, 10, 0, 1, 1)
-    love.graphics.draw(sPaper, 200 + _leftMargin, 10, 0, 1, 1)
-    love.graphics.draw(sScissors, 400 + _leftMargin, 10, 0, 1, 1)
 
 end
