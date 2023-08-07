@@ -18,8 +18,12 @@ function love.load()
     csCircle.w = csCircle.rad
     csCircle.h = csCircle.rad
 
-end
     
+    comChoice = math.random(0, 3)
+    
+
+end
+
 ----------------------- update ---------------------
 
 function love.update(dt)
@@ -72,6 +76,7 @@ function love.draw()
     love.graphics.draw(oPaper.sprite, oPaper.x, oPaper.y, oPaper.rot, oPaper.sX, oPaper.sY);
     love.graphics.draw(oScissors.sprite, oScissors.x, oScissors.y, oScissors.rot, oScissors.sX, oScissors.sY);
     
+
     -- hover change
     local eColor = {}
     eColor.r, eColor.g, eColor.b = 0.6, 0.8, 0.8
@@ -79,6 +84,8 @@ function love.draw()
     local clickCol = {}
     clickCol.r, clickCol.g, clickCol.b = 0.5, 0.5, 0.5
     
+
+    -- collision check
     if AABB(oRock.x, oRock.y, oRock.w, oRock.h, csCircle.x, csCircle.y, csCircle.w, csCircle.h) then
         
         eCol(eColor.r, eColor.g, eColor.b, oRock)
@@ -121,6 +128,8 @@ function love.draw()
     
     love.graphics.print(cText, 200, 200);
     love.graphics.circle("fill", csCircle.x, csCircle.y, csCircle.rad); --  only cursor replace
+    love.graphics.print(comChoice, 200, 300);
     
 
 end
+

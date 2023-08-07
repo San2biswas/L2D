@@ -1,3 +1,4 @@
+ -- Elements 
  -- rock properties
  oRock = {}
  oRock.sprite = love.graphics.newImage("Assets/Sprites/UI/Rock.png");
@@ -32,5 +33,23 @@
  oScissors.rot = 0;
  oScissors.w = oScissors.sprite:getWidth();
  oScissors.h = oScissors.sprite:getHeight();
+
  
+-- --  -- object element properties
+--  function objElements(name, x, y, sx, sy, rot, sprite)
+    
+--     name = {}
+
+--     name.sprite = love.graphics.newImage(sprite);
+--     name.x = 25;
+--     name.y = 10;
+--     name.sX = 1;
+--     name.sY = 1;
+--     name.rot = 0;
+--     name.w = name.sprite:getWidth();
+--     name.h = name.sprite:getHeight();
+        
+--     return name
+
+--  end
  
