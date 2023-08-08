@@ -11,6 +11,7 @@ L2D repo created. Added L2D_RPS Game to it.
 
 ## Games :
 - L2D_RPS (wip)
+> a new interesting way of rock paper scissor game made in Love2d. 
 
 ## Apps :
 - L2D_ToDo (in future)
