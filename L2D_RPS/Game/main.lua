@@ -18,8 +18,22 @@ function love.load()
     csCircle.w = csCircle.rad
     csCircle.h = csCircle.rad
 
+    cNo = math.random(os.time())/10
+    comChoice = math.ceil(((cNo - math.floor(cNo))*10) % 2)
+
+    if comChoice == 0 then
+        aIChoice = "Rock"
+    end
     
-    comChoice = math.random(0, 3)
+    if comChoice == 1 then
+        aIChoice = "Paper"
+    end
+    
+    if comChoice == 2 then
+        aIChoice = "Scissors"
+    end
+    
+    
     
 
 end
@@ -128,7 +142,11 @@ function love.draw()
     
     love.graphics.print(cText, 200, 200);
     love.graphics.circle("fill", csCircle.x, csCircle.y, csCircle.rad); --  only cursor replace
-    love.graphics.print(comChoice, 200, 300);
+    if love.mouse.isDown(1) then
+    
+        love.graphics.print(aIChoice, 200, 300);
+    
+    end
     
 
 end
