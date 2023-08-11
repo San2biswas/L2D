@@ -15,25 +15,18 @@ function love.load()
     csCircle.x = 0;
     csCircle.y = 0;
     csCircle.rad = 10;
-    csCircle.w = csCircle.rad
-    csCircle.h = csCircle.rad
+    csCircle.w = csCircle.rad;
+    csCircle.h = csCircle.rad;
 
-    cNo = math.random(os.time())/10
-    comChoice = math.ceil(((cNo - math.floor(cNo))*10) % 2)
+    aiT = 0;
+    cNo = math.random(os.time())/10;
+    comChoice = math.ceil(((cNo - math.floor(cNo))*10) % 2);
 
-    if comChoice == 0 then
-        aIChoice = "Rock"
-    end
-    
-    if comChoice == 1 then
-        aIChoice = "Paper"
-    end
-    
-    if comChoice == 2 then
-        aIChoice = "Scissors"
-    end
+    cText = "let's play..."
+
     
     
+ 
     
 
 end
@@ -48,15 +41,44 @@ function love.update(dt)
     rClick = love.mouse.isDown(2)
     mClick = love.mouse.isDown(3)
     
+    
     -- keyboard controls
-    key_escape = love.keyboard.isDown("escape")    
-
+    key_escape  = love.keyboard.isDown("escape")    
+    key_r       = love.keyboard.isDown("r")    
+    
     csCircle.x, csCircle.y = love.mouse.getPosition() -- cursor position
     
 
     -- keyboard controls
     if key_escape then
         love.window.close()
+    end
+    
+    if key_r then
+        love.event.quit("restart")
+    end
+
+
+    -- ai choice lock   
+    if aiT == 0 then
+        aIChoice = "Rock"
+    end
+    
+    if aiT == 1 then
+        aIChoice = "Paper"
+    end
+    
+    if aiT == 2 then
+        aIChoice = "Scissors"
+    end
+
+    if lClick then
+
+        aiT = aiT + 1;
+        if aiT > 2 then
+            aiT = 0;
+        end
+        
     end
 
 
@@ -104,7 +126,7 @@ function love.draw()
         
         eCol(eColor.r, eColor.g, eColor.b, oRock)
         if lClick then
-            
+
             eCol(clickCol.r, clickCol.g, clickCol.b, oRock)
             cText = "Rock"
             
@@ -133,20 +155,14 @@ function love.draw()
         end
         
         
-    else
-        
-        baseCol()
-        cText = ""
+
         
     end
     
     love.graphics.print(cText, 200, 200);
     love.graphics.circle("fill", csCircle.x, csCircle.y, csCircle.rad); --  only cursor replace
-    if love.mouse.isDown(1) then
-    
-        love.graphics.print(aIChoice, 200, 300);
-    
-    end
+    love.graphics.print(aIChoice, 200, 300);
+    love.graphics.print(aiT, 300, 300);
     
 
 end
